@@ -2,20 +2,33 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"sync"
 	"time"
 )
 
-func funcA() {
-	for i := 0; i< 10; i++ {
-		fmt.Print("A")
-		time.Sleep(10 * time.Millisecond)
-	}
+func getLuckyNum() {
+	fmt.Println("...")
+
+	rand.Seed(time.Now().Unix())
+	time.Sleep(time.Duration(rand.Intn(3000)) * time.Millisecond)
+
+	num := rand.Intn(10)
+	fmt.Printf("Today's your lucky number is %d!\n", num)
 }
 
 func _goroutine() {
-	go funcA()
-	for i := 0; i< 10; i++ {
-		fmt.Print("B")
-		time.Sleep(20 * time.Millisecond)
-	}
+	fmt.Println("what is today's lucky number?")
+
+	var wg sync.WaitGroup
+	wg.Add(1)
+	
+	// `wg.Done` でゴルーチンが終了した時に wg の内部カウンタの値をデクリメントする
+	go func() {
+		defer wg.Done()
+		getLuckyNum()
+	}()
+
+	// `wg.Wait` で wg の内部カウンタの値が 0 になるまで待機する
+	wg.Wait()
 }
