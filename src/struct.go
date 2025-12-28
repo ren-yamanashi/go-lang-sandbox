@@ -1,15 +1,15 @@
-package mypkg
+package main
 
 type Person struct {
 	name string // 小文字の場合はパッケージ外からアクセス不可
-	Age  int
+	age  int
 }
 
 func (p *Person) SetPerson(name string, age int) {
 	p.name = name
-	p.Age = age
+	p.age = age
 }
 
 func (p *Person) GetPerson() (string, int) {
-	return p.name, p.Age
+	return p.name, p.age
 }
