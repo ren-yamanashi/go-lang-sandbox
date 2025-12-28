@@ -20,7 +20,7 @@ func gotoExample() (string, error) {
 		fmt.Println(err)
 		goto Done
 	}
-	
+
 	fmt.Println(data)
 Done:
 	return data, err
@@ -30,7 +30,7 @@ func getFileName() (string, error) {
 	return "sample.txt", nil
 }
 
-func readFile(filename ... string) (string, error) {
+func readFile(filename ...string) (string, error) {
 	for _, fname := range filename {
 		fmt.Println("Reading file:", fname)
 	}
