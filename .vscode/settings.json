@@ -1,0 +1,8 @@
+{
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize",
+    "markdownlint.config": {
+        "MD001": false,
+        "MD041": false
+    }
+}

@@ -1,0 +1,11 @@
+- bool: 真偽値(true or false)
+- int8 / int16 / int32 / int64: nビット整数
+- uint8 / uint16 / uint32 / uint64: nビット非負整数
+- float32 / float64: nビット浮動小数点数
+- complex64 / complex128: nビット虚数
+- byte: 1バイトデータ(uint8と同義)
+- rune: 1文字(int32と同義)
+- uint: uint32 または uint64
+- int: int32 または int64
+- uintptr: ポインタを表現するのに十分な非負整数
+- string: 文字列
