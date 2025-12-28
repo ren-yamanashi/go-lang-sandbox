@@ -31,8 +31,8 @@ func getFileName() (string, error) {
 }
 
 func readFile(filename ...string) (string, error) {
-	for _, fname := range filename {
-		fmt.Println("Reading file:", fname)
+	for _, f := range filename {
+		fmt.Println("Reading file:", f)
 	}
 	return "Hello World!", errors.New("Can't read file")
 }

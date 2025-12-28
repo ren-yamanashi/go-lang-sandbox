@@ -22,10 +22,10 @@ func (c Cat) Speak() string {
 	return "Meow! My name is " + c.name
 }
 
-func checkIsAnimal(a interface{}) {
-	animal, isAnimal := a.(Animal)
-	if isAnimal {
-		fmt.Println(animal.Speak())
+func checkIsAnimal(arg interface{}) {
+	a, ok := arg.(Animal)
+	if ok {
+		fmt.Println(a.Speak())
 	} else {
 		fmt.Println("Not an animal")
 	}

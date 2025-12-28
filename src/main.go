@@ -6,9 +6,9 @@ import (
 )
 
 func main() {
-	var person Person
-	person.SetPerson("Alice", 30)
-	name, age := person.GetPerson()
+	var p Person
+	p.SetPerson("Alice", 30)
+	name, age := p.GetPerson()
 	fmt.Printf("Name: %s, Age: %d\n", name, age)
 
 	dog := Dog{name: "Buddy"}
@@ -21,4 +21,5 @@ func main() {
 	_pointer()
 	_new()
 	mypkg.FuncA()
+	_goroutine()
 }

@@ -12,12 +12,12 @@ func _new() {
 	bookList := []*Book{}
 
 	for i := 0; i < 10; i++ {
-		book := new(Book)
-		book.title = fmt.Sprintf("Book %d", i+1)
-		bookList = append(bookList, book)
+		b := new(Book)
+		b.title = fmt.Sprintf("Book %d", i+1)
+		bookList = append(bookList, b)
 	}
 
-	for _, book := range bookList {
-		fmt.Println(book.title)
+	for _, b := range bookList {
+		fmt.Println(b.title)
 	}
 }
