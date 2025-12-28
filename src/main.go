@@ -1,8 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"local/mypkg"
+)
 
 func main() {
-	const msg string = "hello, world"
-	fmt.Println(msg)
+	p := mypkg.Person{}
+	p.SetPerson("Alice", 30)
+	name, age := p.GetPerson()
+	fmt.Printf("Name: %s, Age: %d\n", name, p.Age)
 }
