@@ -18,4 +18,5 @@ func main() {
 	checkIsAnimal(nonAnimal)
 
 	_pointer()
+	_new()
 }
