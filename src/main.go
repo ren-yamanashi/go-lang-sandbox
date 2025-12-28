@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"src/local/mypkg"
 )
 
 func main() {
@@ -19,4 +20,5 @@ func main() {
 
 	_pointer()
 	_new()
+	mypkg.FuncA()
 }
